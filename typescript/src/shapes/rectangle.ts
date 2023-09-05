@@ -4,15 +4,17 @@ interface Rectangle {
     computeArea: () => number
 }
 
-function newRectangle(width: number, height: number): Rectangle {
+function newRectangle(width: number, height: number): Shape {
+    let Width = width;
+    let Height = height;
     return {
-        width,
-        height,
-
         computeArea: function (): number {
-            return width * height
+            return Width * Height;
         }
     }
 }
+
+
+
 
 export { Rectangle, newRectangle }
